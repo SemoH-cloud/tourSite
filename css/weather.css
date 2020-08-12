@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: rgba(150, 168, 190, 0.4);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+#app {
+  width: 270px;
+  margin: 3rem 0;
+  background: #506E92;
+  box-shadow: 0 15px 10px -10px rgba(52, 79, 112, 0.75);
+  overflow: hidden;
+}
+#app h1 {
+  margin: 0;
+  padding: .3rem 1rem;
+  font-size: .75em;
+  font-weight: bold;
+  text-align: center;
+  color: #3F6083;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.display {
+  text-align: center;
+  color: #fff;
+}
+.display h2 {
+  margin: 2rem 1rem .5rem;
+}
+.display h5 {
+  position: relative;
+  margin: .7rem 1rem 4rem;
+  font-size: .85em;
+  color: #96A8BE;
+}
+.display h5::after {
+  content: '';
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 3rem;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.65);
+}
+.display .temp {
+  padding: 0 1rem;
+  font-size: 2em;
+}
+.display img {
+  width: auto;
+  height: 128px;
+  display: inline-block;
+}
+.display .text {
+  margin: 0 0 1.5rem;
+  padding: 0 1rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.actions {
+  position: relative;
+  margin-top: 3rem;
+}
+.actions .togglSearch {
+  height: 35px;
+  line-height: 35px;
+  padding: 0 1rem;
+  font-family: "Open Sans Condensed", sans-serif;
+  text-align: center;
+  color: rgba(150, 168, 190, 0.6);
+  background: #3F6083;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: color .4s, -webkit-transform .4s;
+  transition: color .4s, -webkit-transform .4s;
+  transition: color .4s, transform .4s;
+  transition: color .4s, transform .4s, -webkit-transform .4s;
+  cursor: pointer;
+}
+.actions .togglSearch.active {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.actions .togglSearch:hover, .actions .togglSearch:focus {
+  color: #96A8BE;
+}
+.actions .panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  background: #344F70;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+}
+.actions .panel.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.actions .panel input, .actions .panel button {
+  height: 35px;
+  line-height: 35px;
+  padding: 0 1rem;
+  font-family: "Open Sans Condensed", sans-serif;
+  outline: none;
+  background: transparent;
+  border: none;
+  -webkit-transition: color .4s;
+  transition: color .4s;
+  color: rgba(150, 168, 190, 0.4);
+}
+.actions .panel input:hover, .actions .panel input:focus, .actions .panel button:hover, .actions .panel button:focus {
+  color: #96A8BE;
+}
+.actions .panel input {
+  -webkit-box-flex: 2;
+          flex-grow: 2;
+}
+.actions .panel button {
+  border-left: 1px solid rgba(150, 168, 190, 0.4);
+  cursor: pointer;
+}
+.actions .panel button i {
+  vertical-align: middle;
+}
