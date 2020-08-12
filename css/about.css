@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* About */
+#about {
+  padding: 50px ;
+}
+
+.about_authors {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 80px 40px;
+}
+
+.about_authors img {
+  width: 170px;
+  height: 140px;
+  line-height: 170px;
+  margin: auto;
+}
+
+
+#about_quote {
+  margin: 70px 0 0 0;
+}
+
+#about_description {
+  margin: 70px 0 0 0;
+  font-size: 15px;
+}
