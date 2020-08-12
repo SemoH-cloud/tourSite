@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,9 +18,9 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,700&display=swap"
 	rel="stylesheet" />
-	
 
-
+<script src="js/textevent.js"></script>
+<link rel="stylesheet" href="css/textevent.css">
 <link rel="stylesheet" href="style.css" />
 <script src="main.js" defer></script>
 </head>
@@ -26,18 +28,34 @@
 	<!-- Navbar -->
 	<nav id="navbar">
 		<div class="navbar_logo">
-			<a href="index.html"><img src="imgs/heart.gif" alt="icon" /> </a>
+			<a href="index.jsp"><img src="imgs/heart.gif" alt="icon" /> </a>
 		</div>
 		<div class="navbar_menu">
 			<ul class="navbar_menu">
-			
-				<li class="navbar_menu_item active"><a href="index.html">HOME</a>
+
+				<%
+					Object userID = session.getAttribute("userID");
+				%>
+
+				<li class="navbar_menu_item active"><a href="index.jsp">HOME</a>
 				</li>
 				<li class="navbar_menu_item"><a href="#about">ABOUT</a></li>
 				<li class="navbar_menu_item"><a href="#recommend">RECOMMENDATION</a></li>
 				<li class="navbar_menu_item"><a href="#travelTips">TRAVEL_TIPS</a></li>
+
+				<%
+					if (userID == null) {
+				%>
 				<li class="navbar_menu_item"><a href="login.jsp">LOGIN</a></li>
 				<li class="navbar_menu_item"><a href="join.jsp">JOIN</a></li>
+				<%
+					} else {
+				%>
+				<li class="navbar_menu_item"><a href="logoutAction.jsp">LOGOUT</a></li>
+				<li class="navbar_menu_item"><a href="mypage.jsp">MYPAGE</a></li>
+				<%
+					}
+				%>
 			</ul>
 		</div>
 
@@ -51,7 +69,7 @@
 	<section id="home">
 		<div class="video">
 			<video muted autoplay loop>
-				<source src="imgs/home.mp4" type="video/mp4" width: "1200px"  />
+				<source src="imgs/home.mp4" type="video/mp4" width:"1200px" />
 				<strong>Your browser does not support the video tag.</strong>
 			</video>
 		</div>
@@ -99,20 +117,20 @@
 		<h1>HOT PLACES</h1>
 		<h3>we have some recommendations for you</h3>
 		<div class="hot_place">
-			<a href="" class="place_content"><img
-				src="imgs/seoul.png" alt="seoul" class="card_img" />
+			<a href="" class="place_content"><img src="imgs/seoul.png"
+				alt="seoul" class="card_img" />
 				<p class="place_description">
 					<strong>SEOUL</strong> <br /> the capital of South Korea
-				</p></a> <a href="" class="place_content"><img
-				src="imgs/경주.png" alt="seoul" class="card_img" />
+				</p></a> <a href="" class="place_content"><img src="imgs/경주.png"
+				alt="seoul" class="card_img" />
 				<p class="place_description">
 					<strong>GYEONG-JU</strong> <br /> the museum without walls <br />
-				</p></a> <a href="" class="place_content"><img
-				src="imgs/부산.png" alt="seoul" class="card_img" />
+				</p></a> <a href="" class="place_content"><img src="imgs/부산.png"
+				alt="seoul" class="card_img" />
 				<p class="place_description">
 					<strong>BUSAN</strong> <br /> amazing coastal city <br />
-				</p></a> <a href="" class="place_content"><img
-				src="imgs/제주.png" alt="seoul" class="card_img" />
+				</p></a> <a href="" class="place_content"><img src="imgs/제주.png"
+				alt="seoul" class="card_img" />
 				<p class="place_description">
 					<strong>JEJU</strong> <br /> paradise island <br />
 				</p></a>
@@ -121,16 +139,36 @@
 	<!-- Travel Tips -->
 	<section id="travelTips" class="section">
 
+		<main class="container">
+		<h2 data-splitting=""
+			class="headline headline--fade words chars splitting"
+			style="-word-total: 1; - -char-total: 9; font-size: 30px;">
+			<span class="word" data-word="fading" style="-word-index: 0;">
+				<span class="char" data-char="t" style="-char-index: 0;">T</span> 
+				<span class="char" data-char="r" style="-char-index: 1;">R</span> 
+				<span class="char" data-char="a" style="-char-index: 2;">A</span> 
+				<span class="char" data-char="v" style="-char-index: 3;">V</span> 
+				<span class="char" data-char="e" style="-char-index: 4;">E</span> 
+				<span class="char" data-char="l" style="-char-index: 5;">L</span> 
+				<span class="char" data-char="_" style="-char-index: 6;">_</span>
+				<span class="char" data-char="t" style="-char-index: 7;">T</span> 
+				<span class="char" data-char="i" style="-char-index: 8;">I</span> 
+				<span class="char" data-char="p" style="-char-index: 9;">P</span>
+				<span class="char" data-char="s" style="-char-index: 10;">S</span>
+			</span>
+		</h2>
 
-		<h1>TRAVEL TIPS</h1>
+		</main>
+
+
 		<div class="tips_category">
 			<button class="tips_btn active">TRANSPORTATION</button>
 			<button class="tips_btn">LANGUAGES</button>
 			<button class="tips_btn">FOOD</button>
 		</div>
 		<div class="tips_contents">
-			<a href="" class="contents" target="blank"><img
-				src="imgs/버스.png" alt="bus" class="content_img" />
+			<a href="" class="contents" target="blank"><img src="imgs/버스.png"
+				alt="bus" class="content_img" />
 				<div class="tips_description">
 					<h3>Bus</h3>
 				</div> </a> <a href="" class="contents" target="blank"><img
@@ -184,7 +222,7 @@
 	</section>
 
 	<script id="dsq-count-scr" src="//koreatour.disqus.com/count.js" async></script>
-	
+
 
 
 
