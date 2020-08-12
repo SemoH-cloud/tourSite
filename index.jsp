@@ -138,30 +138,10 @@
 	</section>
 	<!-- Travel Tips -->
 	<section id="travelTips" class="section">
+  
+          <h1 >TRAVEL TIPS</h1>
 
-		<main class="container">
-		<h2 data-splitting=""
-			class="headline headline--fade words chars splitting"
-			style="-word-total: 1; - -char-total: 9; font-size: 30px;">
-			<span class="word" data-word="fading" style="-word-index: 0;">
-				<span class="char" data-char="t" style="-char-index: 0;">T</span> 
-				<span class="char" data-char="r" style="-char-index: 1;">R</span> 
-				<span class="char" data-char="a" style="-char-index: 2;">A</span> 
-				<span class="char" data-char="v" style="-char-index: 3;">V</span> 
-				<span class="char" data-char="e" style="-char-index: 4;">E</span> 
-				<span class="char" data-char="l" style="-char-index: 5;">L</span> 
-				<span class="char" data-char="_" style="-char-index: 6;">_</span>
-				<span class="char" data-char="t" style="-char-index: 7;">T</span> 
-				<span class="char" data-char="i" style="-char-index: 8;">I</span> 
-				<span class="char" data-char="p" style="-char-index: 9;">P</span>
-				<span class="char" data-char="s" style="-char-index: 10;">S</span>
-			</span>
-		</h2>
-
-		</main>
-
-
-		<div class="tips_category">
+			<div class="tips_category">
 			<button class="tips_btn active">TRANSPORTATION</button>
 			<button class="tips_btn">LANGUAGES</button>
 			<button class="tips_btn">FOOD</button>
