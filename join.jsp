@@ -53,7 +53,7 @@
           placeholder="Password"
           required=""
         />
-        <br />
+      
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">
           Join
