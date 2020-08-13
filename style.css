@@ -23,9 +23,8 @@
 	--weight-bold: 700; 
 	--weight-semi-bold: 600; 
 	--weight-regular: 400;
-	/* Size */ -
+	/* Size */ 
 	--size-border-radius: 4px;
-	
 	/* Animation */ 
 	--annimation-duration: 300ms;
 }
@@ -117,7 +116,7 @@ p {
 	justify-content: space-between;
 	background-color: var(--color-black);
 	align-items: center;
-	color: var(- -color-white);
+	color: var(--color-white);
 	padding: 16px;
 }
 
@@ -138,13 +137,13 @@ p {
 	height: 60px;
 }
 
-
 .navbar_menu_item:hover {
 	border: 1px solid white;
 	border-radius: 6px;
 	background-color: var(--color-dark-pink);
 	color: white;
 	text-decoration: none;
+	background-color: var(--color-dark-pink);
 }
 
 .navbar_togglebtn {
@@ -157,23 +156,17 @@ p {
 	padding: 0;
 }
 
-/* Home */
 #home {
-	position: relative;
 	width: 100%;
-	padding: 56.6% 0 6px;
+	height: 400px;
+	overflow: hidden;
+	margin: 0px auto;
+	padding-top: 90px;
 	
 }
 
-
 .video {
-	position: absolute;
-	top:0;
-	left:0;
-	width: 100%;
-	height: 200px;
 	z-index: -1;
-	
 }
 
 video {
@@ -251,12 +244,13 @@ element.style {
 #travelTips {
 	padding: 0;
 	margin-top: 100px;
-	z-index:-1;
+	z-index: -1;
 }
 
 #travelTips h1 {
 	padding: 130px 50px 10px 50px;
 }
+
 .tips_btn {
 	border: 1px solid var(--color-dark-white);
 	border-radius: var(--size-border-radius);
@@ -266,27 +260,23 @@ element.style {
 	color: var(--color-white);
 	margin: 5px;
 	border-radius: 6px;
-	
 }
 
 .tips_categories {
 	margin: 40px;
-	
 }
 
 .tips_btn.selected, .tips_btn:hover {
 	background-color: var(--color-dark-pink);
 	color: var(--color-black);
-	
 }
-
 
 .tips_contents {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	margin-top: 50px;
-	z-index:-1;
+	z-index: -1;
 	opacity: 1;
 	transition: all var(--animation-duration) ease-out;
 }
@@ -304,7 +294,6 @@ element.style {
 	width: 190px;
 	height: 250px;
 	margin: 10px;
-	
 }
 
 .content.invisible {
@@ -312,15 +301,13 @@ element.style {
 }
 
 .content_img {
-	
 	width: 180px;
 	height: 180px;
 	border-radius: 50%;
-	z-index:-1;
+	z-index: -1;
 }
 
 .tips_description {
-	
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -334,45 +321,38 @@ element.style {
 	opacity: 0;
 	transform: translateY(10px);
 	transition: all var(--annimation-duration) ease-in;
-	
 }
 
 .content:hover .tips_description {
 	opacity: 0.6;
 	transform: translateY(0px);
 	border-radius: 4px;
-	
 }
 
 .tips_description h3 {
 	color: white;
-	align-items:center;
-	
+	align-items: center;
 }
-
 
 /* Contact (Footer)  */
 .contact_title {
 	margin-top: 80px;
 }
 
-
-
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
 	:root {
-	
-	/* Font size */ 
-	--font-large: 30px; 
-	--font-medium: 18px; 
-	--font-regular: 16px; 
-	--font-small: 13px; 
-	--font-micro: 12px;
+		/* Font size */ -
+		-font-large: 30px; -
+		-font-medium: 18px; -
+		-font-regular: 16px; -
+		-font-small: 13px; -
+		-font-micro: 12px;
 	}
 	.section {
-	padding: 16px;
-	text-align: center;
-	margin:auto;
+		padding: 16px;
+		text-align: center;
+		margin: auto;
 	}
 	.navbar_togglebtn {
 		display: block;
@@ -388,15 +368,29 @@ element.style {
 		flex-direction: column;
 		text-align: center;
 		width: 100%;
-		display:none;	
+		display: none;
 	}
 	.navbar_menu.open {
-	 display: block;
+		display: block;
 	}
-	
+	/* Home */
+	#home {
+		width: 100%;
+		height: 400px;
+		overflow: hidden;
+		margin: 0px auto;
+		padding-top: 90px;
+	}
+	.video {
+		z-index: -1;
+	}
+	video {
+		width: 100%;
+	}
+	/* About */
 	#about {
-	padding: 0px;
-	padding-top: 90px;
+		padding: 0px;
+		padding-top: 90px;
 	}
 	.about_authors {
 		flex-direction: column;
@@ -404,34 +398,29 @@ element.style {
 	.author {
 		margin-bottom: 38px;
 	}
-	
-	#recommend h1{
-	padding: 0px;
-	padding-top: 90px;
+	#recommend h1 {
+		padding: 0px;
+		padding-top: 90px;
 	}
 	.hot_place {
-		
 		flex-grow: 1;
 	}
 	.place_content {
-	width: 300px;
-	height: 350px;
+		width: 300px;
+		height: 350px;
 		margin-top: 5px;
 		flex-wrap: wrap;
 	}
-	
 	#travelTips {
-	margin-top: 10px;
-	
+		margin-top: 10px;
 	}
 	#travelTips h1 {
-	padding: 0px;
-	padding-top: 90px;
+		padding: 0px;
+		padding-top: 90px;
 	}
-	
 	.tips_btn {
-	width:100%;
-	} 
+		width: 100%;
+	}
 	.tips_contents {
 		display: flex;
 		flex-direction: row;
@@ -441,5 +430,4 @@ element.style {
 	.content {
 		flex-wrap: wrap;
 	}
-	
 }
