@@ -68,7 +68,7 @@
 	<section id="home">
 		<div class="video">
 			<video muted autoplay loop>
-				<source src="imgs/home.mp4" type="video/mp4" width:"1200px" />
+				<source src="imgs/bg.mp4" type="video/mp4" />
 				<strong>Your browser does not support the video tag.</strong>
 			</video>
 		</div>
