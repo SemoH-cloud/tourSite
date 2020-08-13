@@ -8,7 +8,7 @@
 <title>Tour Web</title>
 <meta name="description" content="tour tips of Korea" />
 <meta name="author" content="H&L" />
-<link rel="icon" type="image/png" href="/imgs/favicon.ico" />
+<link rel="icon" type="image/png" href="imgs/favicon.ico" />
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
 	integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
@@ -19,10 +19,9 @@
 	href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,700&display=swap"
 	rel="stylesheet" />
 
-<script src="js/textevent.js"></script>
 <link rel="stylesheet" href="css/textevent.css">
 <link rel="stylesheet" href="style.css" />
-<script src="main.js" defer></script>
+<script src="js/main.js" defer></script>
 </head>
 <body>
 	<!-- Navbar -->
@@ -30,7 +29,7 @@
 		<div class="navbar_logo">
 			<a href="index.jsp"><img src="imgs/heart.gif" alt="icon" /> </a>
 		</div>
-		<div class="navbar_menu">
+		
 			<ul class="navbar_menu">
 
 				<%
@@ -57,7 +56,7 @@
 					}
 				%>
 			</ul>
-		</div>
+		
 
 		<!-- toggle btn -->
 		<button class="navbar_togglebtn">
@@ -141,33 +140,72 @@
   
           <h1 >TRAVEL TIPS</h1>
 
-			<div class="tips_category">
-			<button class="tips_btn active">TRANSPORTATION</button>
-			<button class="tips_btn">LANGUAGES</button>
-			<button class="tips_btn">FOOD</button>
+			<div class="tips_categories">
+			<button class="tips_btn selected" data-filter="*">ALL</button>
+			<button class="tips_btn" data-filter="trans">TRANSPORTATION</button>
+			<button class="tips_btn" data-filter="lan">LANGUAGES</button>
+			<button class="tips_btn" data-filter="theme">THEME</button>
 		</div>
 		<div class="tips_contents">
-			<a href="" class="contents" target="blank"><img src="imgs/버스.png"
+				<a href="" class="content" target="blank" data-type="trans"><img src="imgs/버스.png"
 				alt="bus" class="content_img" />
 				<div class="tips_description">
 					<h3>Bus</h3>
-				</div> </a> <a href="" class="contents" target="blank"><img
+				</div> </a> <a href="" class="content" target="blank" data-type="trans"><img
 				src="imgs/지하철.png" alt="bus" class="content_img" />
 				<div class="tips_description">
 					<h3>Subway</h3>
-				</div></a> <a href="" class="contents" target="blank"><img
+				</div></a> <a href="" class="content" target="blank" data-type="trans"><img
 				src="imgs/택시.png" alt="bus" class="content_img" />
 				<div class="tips_description">
 					<h3>Taxi</h3>
-				</div></a> <a href="" class="contents" target="blank"><img
+				</div></a> <a href="" class="content" target="blank" data-type="trans"><img
 				src="imgs/승용차.png" alt="bus" class="content_img" />
 				<div class="tips_description">
 					<h3>Ect</h3>
+				
+				
+				</div></a> <a href="" class="content" target="blank" data-type="lan"><img
+				src="imgs/airport.png" alt="bus" class="content_img" />
+				<div class="tips_description">
+					<h3>Airport</h3>
+					</div></a> <a href="" class="content" target="blank" data-type="lan"><img
+				src="imgs/airport.png" alt="bus" class="content_img" />
+				<div class="tips_description">
+					<h3>Airport</h3>
+					</div></a> <a href="" class="content" target="blank" data-type="lan"><img
+				src="imgs/airport.png" alt="bus" class="content_img" />
+				<div class="tips_description">
+					<h3>Airport</h3>
+					</div></a> <a href="" class="content" target="blank" data-type="lan"><img
+				src="imgs/airport.png" alt="bus" class="content_img" />
+				<div class="tips_description">
+					<h3>Airport</h3>
+				
+				
+					</div></a> <a href="" class="content" target="blank" data-type="theme"><img
+				src="imgs/temple.jpg" alt="temple" class="content_img" />
+				<div class="tips_description">
+					<h3>Temple stay</h3>
+					</div></a> <a href="" class="content" target="blank" data-type="theme"><img
+				src="imgs/palace.png" alt="palace" class="content_img" />
+				<div class="tips_description">
+					<h3>Palace tour</h3>
+					</div></a> <a href="" class="content" target="blank" data-type="theme"><img
+				src="imgs/chimac.jpg" alt="bus" class="content_img" />
+				<div class="tips_description">
+					<h3>Drinking</h3>
+					</div></a> <a href="" class="content" target="blank" data-type="theme"><img
+				src="imgs/shop.jpg" alt="bus" class="content_img" />
+				<div class="tips_description">
+					<h3>Shopping</h3>
 				</div></a>
+			
 		</div>
 	</section>
 
 
+<!-- comment -->
 	<div id="disqus_thread" style="margin: 50px"></div>
 	<script>
 		/**
@@ -198,12 +236,10 @@
 		<h3 class="contact_email">tourtips@tips</h3>
 		<p class="contact_rights">2020 TourTips Korea - All rights
 			reserved</p>
-
 	</section>
 
+  	
 	<script id="dsq-count-scr" src="//koreatour.disqus.com/count.js" async></script>
-
-
 
 
 </body>
