@@ -40,7 +40,7 @@
 				
 			</button>
 			
-			<a class="navbar-brand" href="main.jsp">Hello, Korea</a>
+			<a class="navbar-brand" href="index.jsp">Hello, Korea</a>
 				<!-- Bootstrap navbar 기본 메뉴바 -->
 		</div>
 		
